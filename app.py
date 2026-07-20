@@ -396,7 +396,7 @@ if submit and question.strip():
             "time": datetime.now().strftime("%d/%m/%Y %H:%M")
         }
     )
-    st.experimental_rerun()
+    # st.rerun()
             
     with st.expander("Sources Used"):
         for idx in indices[0]: 
