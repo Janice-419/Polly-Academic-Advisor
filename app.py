@@ -361,7 +361,14 @@ if submit and question.strip():
             )
             answer = response.choices[0].message.content
         except Exception as e:
-            answer = str(e)
+            
+            if "429" in str(e):
+                answer = (
+                     "Polly is temporarily unavailable because the AI service "
+                     "has reached its daily usage limit. Please try again later."
+                )
+            else:
+                answer = f"Error: {str(e)}"
 
         
 
