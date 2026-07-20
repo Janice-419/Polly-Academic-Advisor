@@ -351,7 +351,7 @@ if submit and question.strip():
     with st.spinner("📖 Polly is thinking..."):
         try:
             response = client.chat.completions.create(
-                model="openai/gpt-oss-20b:free",
+                model="google/gemma-4-26b-a4b-it:free",
                 messages=[
                     {
                         "role": "user",
