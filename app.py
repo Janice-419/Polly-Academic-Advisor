@@ -349,23 +349,24 @@ if submit and question.strip():
     # Ask Phi-4
         
     with st.spinner("📖 Polly is thinking..."):
-    try:
-        response = client.chat.completions.create(
-            model="openai/gpt-oss-20b:free",
-            messages=[
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ]
-        )
-    except Exception:
-        answer = (
-            "The AI service is currently busy."
-            "Please try again in a few moments"
-        )
+        try:
+            response = client.chat.completions.create(
+                model="openai/gpt-oss-20b:free",
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ]
+            )
+            answer = response.choices[0].message.content
+        except Exception:
+            answer = (
+                "The AI service is currently busy."
+                "Please try again in a few moments"
+            )
 
-        answer = response.choices[0].message.content
+        
 
     answer = answer.replace("</div>", "")
     answer = answer.replace("<div>", "")
