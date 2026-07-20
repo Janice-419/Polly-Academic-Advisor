@@ -1,0 +1,39 @@
+PolyU Academic Advising RAG Project
+
+Data Sources
+------------
+- PolyU Student Handbook
+- GUR Guidelines
+- Subject Registration pages
+- Programme & Curriculum pages
+- GPA & Academic Performance pages
+- Graduation pages
+- WIE pages
+
+Pipeline
+--------
+1. Extract text from PDFs.
+2. Extract text from websites.
+3. Combine text into polyu_kb.txt.
+4. Split text into chunks.
+5. Generate embeddings using all-MiniLM-L6-v2.
+6. Store embeddings in FAISS.
+7. Convert user question into embedding.
+8. Retrieve top 3 chunks.
+9. Combine chunks into last_context.txt.
+
+Current Status
+--------------
+Completed:
+- PDF extraction
+- Website extraction
+- Knowledge base creation
+- Chunking
+- Embeddings
+- FAISS retrieval
+- Context creation
+
+Next Step
+---------
+- Integrate LLM (GPT/Qwen/Llama)
+- Generate answers from retrieved context
