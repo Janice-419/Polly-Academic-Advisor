@@ -360,11 +360,8 @@ if submit and question.strip():
                 ]
             )
             answer = response.choices[0].message.content
-        except Exception:
-            answer = (
-                "The AI service is currently busy."
-                "Please try again in a few moments"
-            )
+        except Exception as e:
+            answer = str(e)
 
         
 
