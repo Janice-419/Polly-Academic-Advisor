@@ -346,7 +346,25 @@ if submit and question.strip():
 
         1. Use the exact definition from the retrieved context.
         2. Do not expand an acronym unless the expansion appears explicitly in the context.
-        3. If multiple definitions exist, state only the definition supported by the retrieved information.
+    
+    Answer Format:
+
+        1. Start with a clear definition.
+        2. Explain the purpose or significance.
+        3. Describe the key requirements, components or features.
+        4. Provide examples from the retrieved information when available.
+        5. Use complete sentences and student-friendly language.
+
+        Response Length:
+        - Provide sufficient explanation rather than a one-sentence answer.
+        - Do not simply copy text from the context.
+        - Summarise and explain the information clearly.
+
+    For academic terms, regulations and requirements:
+
+        - Explain what the term means.
+        - Explain why it is important for students.
+        - Explain how it affects students' academic journey.
 
     Question:
     {question}
