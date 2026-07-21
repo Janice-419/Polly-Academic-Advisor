@@ -359,7 +359,9 @@ if submit and question.strip():
                     }
                 ]
             )
-           answer = str(response)
+
+            answer = str(response)
+
         except Exception as e:
             
             if "429" in str(e):
