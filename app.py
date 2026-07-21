@@ -359,7 +359,7 @@ if submit and question.strip():
                     }
                 ]
             )
-            answer = response.choices[0].message.content
+           answer = str(response)
         except Exception as e:
             
             if "429" in str(e):
