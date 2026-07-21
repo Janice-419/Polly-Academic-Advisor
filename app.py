@@ -351,7 +351,7 @@ if submit and question.strip():
     with st.spinner("📖 Polly is thinking..."):
         try:
             response = client.chat.completions.create(
-                model="nvidia/nemotron-3-ultra-550b-a55b:free",
+                model="openai/gpt-oss-20b:free",
                 messages=[
                     {
                         "role": "user",
@@ -360,7 +360,7 @@ if submit and question.strip():
                 ]
             )
 
-            answer = str(response)
+            answer = response.choices[0].message.content
 
         except Exception as e:
             
