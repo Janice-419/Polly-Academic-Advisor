@@ -342,6 +342,12 @@ if submit and question.strip():
     knowledge base and the uploaded
     document when answering.
 
+    When answering acronym questions:
+
+        1. Use the exact definition from the retrieved context.
+        2. Do not expand an acronym unless the expansion appears explicitly in the context.
+        3. If multiple definitions exist, state only the definition supported by the retrieved information.
+
     Question:
     {question}
     """
